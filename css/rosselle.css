@@ -39,7 +39,7 @@ header h1 {
 
 main {
   left: 12%;
-  width: 69%;
+  width: 92%;
 }
 
 nav, main {
@@ -52,7 +52,7 @@ nav {
   width: 12%;
   min-width: 132px;
 }
-\
+
 
 #social-icons {
   position: absolute;

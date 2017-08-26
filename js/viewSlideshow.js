@@ -28,7 +28,6 @@
     slideshow.$data.text(data);
     slideshow.$image.hide();
     slideshow.$image.css('background-image', 'url(' + slideshow.images[slideshow.current].path + ')');
-    // $('#testing-nexx').attr('src',slideshow.images[slideshow.current].path);
     slideshow.$image.show();
   };
 

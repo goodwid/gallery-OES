@@ -15,23 +15,8 @@
 
   Art.all = [];
 
-  Art.filter = show => {
-    return Art.all.filter(el => {
-      return show.indexOf(el.show) > -1;
-    });
-  };
-
   Art.initShows = () => {
-    Art.current = 'Biomorphics';
-    const shows = Art.all
-      .map(el => el.show)
-      .sort()
-      .reduce((prev,curr) => {
-        if (curr != prev[0]) prev.unshift(curr);
-        return prev;
-      }, []);
-    Art.past = shows.filter(el => el !== Art.current);
-    return shows;
+    return Art.all;
   };
 
   Art.loadAll = data => {

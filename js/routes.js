@@ -5,7 +5,7 @@
     page.base('/');
 
     page('/', slideshowController.index);
-    page('slideshow/:show', slideshowController.index);
+    page('slideshow', slideshowController.index);
     page('about', aboutController.index);
     page('contact', contactController.index);
 
