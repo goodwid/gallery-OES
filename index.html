@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Image Gallery</title>
+    <link rel="stylesheet" type="text/css" href="/css/rosselle.css">
+    <link rel="stylesheet" type="text/css" href="/css/state.css">
+    <link rel="stylesheet" type="text/css" href="/css/slideshow.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+    <script id="selector-template" type="text/x-handlerbars-template">
+      <option value="{{data}}">{{data}}</option>
+    </script>
+  </head>
+
+
+  <body>
+
+
+    <header class="content-width">
+        <h1 class="center-content">Image Gallery</h1>
+    </header>
+
+    <nav class="center-content">
+      <ul>
+        <!-- <li class="nav-item tab"><a class="nav-link" href="#artwork">Current&nbsp;work</a></li>
+        <li class="nav-item tab"><a class="nav-link" href="#artwork">Past&nbsp;work</a></li>
+        <li class="nav-item tab"><a class="nav-link" href="#about">About&nbsp;Andrea</a></li>
+        <li class="nav-item tab"><a class="nav-link" href="#contact">Contact</a></li> -->
+
+
+        <li><a class="nav-link" href="/slideshow/current">Current&nbsp;work</a></li>
+        <li><a class="nav-link" href="/slideshow/past">Past&nbsp;work</a></li>
+        <li><a class="nav-link" href="/about">About&nbsp;Andrea</a></li>
+        <li><a class="nav-link" href="/contact">Contact</a></li>
+      </ul>
+      <div id="social-icons">
+        <a href="https://www.facebook.com/rossellestudios/" target="_base"><i class="fa fa-facebook-square fa-2x"></i></a>
+        <a href="https://www.pinterest.com/rossellestudios/" target="_base"><i class="fa fa-pinterest-square fa-2x"></i></a>
+        <a href="https://www.instagram.com/rossellestudios/" target="_base"><i class="fa fa-instagram fa-2x"></i></a>
+      </div>
+    </nav>
+
+    <main>
+      <section id="slideshow">
+        <section id="slideshow-image">
+          <i id="button-left" class="fa fa-chevron-circle-left fa-3x"></i>
+          <i id="button-right" class="fa fa-chevron-circle-right fa-3x"></i>
+          <div id="left-side"></div>
+          <div id="right-side"></div>
+          <div id="info" class="center-content"></div>
+        </section>
+
+      </section>
+
+      <section id="about">
+
+        <h2>About Me</h2>
+        <p>
+          Creating meaningful work, as an artist, has been one of the primary passions of my
+          life for the last 20 years. Graduating with a BFA in Ceramics in 1998 <em>(Alfred University)</em>,
+          I began utilizing my passion for teaching as well. I have taught in South Korea,
+          Poland, Texas, Michigan, New York, and Oregon. I was also blessed to get an MA in
+          Ceramics <em>(Central Michigan University),</em> and an MFA in Visual Arts
+          <em>(Azusa Pacific University)</em>. The last twenty years have found me plenty of
+          opportunities for exhibition, and exploration. Along the way I have had the opportunity
+          to experience a multitude of artistic and educational settings, ideologies and
+          creative pathways. Through working with other artists and students, I have grown to
+          respect and enjoy the many ways people find their creative voice, passion and calling.
+        </p>
+        <p>
+          It is this variety of experience that has led me to create <em>Rosselle Studios</em>.
+          Throughout my career as an artist-teacher I have found that opening up your creative
+          practice to collaboration, new art media, and divergent ways of thinking about the
+          creative process leads to new and dynamic work.  While, ceramics will always be my first
+          love when it comes to art materials, I also love painting, fibers, mixed media, and
+          installation art. Collaborating and seeking the insight of other creative individuals
+          both in and out of the art field has also lead to important dialogues within my work.
+        </p>
+        <p>
+          As an artist, my work and creative process often reveals three main narrative arcs:
+          <ul>
+            <li>
+              <em>Chronic Illness:</em> For all of my adult life I have had Multiple Sclerosis,
+              and for over a decade I have known to call my health struggles by that name. The
+              wondrous and pernicious nature of a life where one’s body struggles against itself
+              is often represented through visual dichotomies in my work.
+            </li>
+            <li>
+              <em>Faith:</em> I find solace and meaning in the sacred. My faith journey has
+              been in the Christian tradition. The push and pull of devotion and doubt seeps
+              through my creative process and my created work.
+            </li>
+            <li>
+              <em>Beauty and the Grotesque:</em> Beauty in chaos, elegance in the mundane,
+              brilliance in the absurd… I am attracted to beauty and to the grotesque. I am
+              interested in the push and pull of what makes people look more closely. The visual
+              cacophony of what we see- its unique and unusual attributes are the fuel of my inspiration.
+            </li>
+          </ul>
+        </p>
+
+      </section>
+
+      <section id="contact">
+        <iframe src="https://docs.google.com/forms/d/1MPjR7qdWOiCayebLheHGz1l9ExNKIN4LZfzB2OrCTSI/viewform?embedded=true" width="98%" height="95%" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+      </section>
+    </main>
+
+
+
+
+
+
+    <footer class="center-content content-width">
+      All images &copy; 1999-2017 Andrea Rosselle.
+      <select id="show-filter">
+        <option value="">-- Filter by show --</option>
+      </select>
+    </footer>
+
+    <script src="/lib/jquery-2.2.3.min.js"></script>
+    <script src="/lib/handlebars-latest.js"></script>
+    <script src="/lib/page.js"></script>
+    <script src="/js/artwork.js"></script>
+    <script src="/js/viewArtwork.js"></script>
+    <script src="/js/viewSlideshow.js"></script>
+    <script src="/js/aboutController.js"></script>
+    <script src="/js/contactController.js"></script>
+    <script src="/js/slideshowController.js"></script>
+    <script src="/js/routes.js"></script>
+
+  </body>
+</html>

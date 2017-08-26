@@ -1,0 +1,138 @@
+@import url(https://fonts.googleapis.com/css?family=Bad+Script);
+
+body {
+  font-family: 'Bad Script', cursive;
+  height: 1200px;
+  overflow: hidden;
+  background-color:  #FFF;
+  margin: 0;
+  padding: 0;
+  background-image: url(https://s3-us-west-2.amazonaws.com/rossellestudios/background.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header, footer, nav{
+  background-color: black;
+  opacity: 0.8;
+  color: white;
+}
+
+header {
+  margin-top: 0px;
+  height: 130px;
+  position: fixed;
+  z-index: 10;
+}
+
+main section {
+  background-color: #fff;
+}
+
+header h1 {
+  margin-top: -14px;
+  font-size: 5em;
+  letter-spacing: 5px;
+  font-weight: 400;
+}
+
+main {
+  left: 12%;
+  width: 69%;
+}
+
+nav, main {
+  position: absolute;
+  top: 130px;
+  bottom: 42px;
+}
+
+nav {
+  width: 12%;
+  min-width: 132px;
+}
+\
+
+#social-icons {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 48px);
+}
+
+#about, #contact {
+  width: 97%;
+  overflow: scroll;
+  padding: 3% inherit;
+  padding-left: +3%;
+  font-size: 160%;
+  background-color: rgba(240,240,240,.85);
+}
+
+#about p {
+  margin: 4% 15px;
+}
+
+.fa {
+  color: #fff;
+}
+
+side section {
+  width: 85%;
+  margin: 0 auto;
+}
+
+main section {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  object-fit: contain;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  height: 42px;
+  /*z-index: ;*/
+}
+
+.content-width {
+  width: 100%;
+}
+
+select {
+  height: 1.7em;
+}
+
+nav ul {
+  padding: 0;
+  list-style: none
+}
+
+nav ul li {
+  background-color: black;
+  padding: 0 3%;
+  /*border: 1px solid black;*/
+  height: 40px;
+  margin-bottom: 30px;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5em;
+}
+
+.center-content {
+  text-align: center;
+}
+
+#about, #show-filter, #contact {
+  display: none;
+}

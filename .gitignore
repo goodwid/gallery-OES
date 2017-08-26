@@ -1,0 +1,7 @@
+images/*
+node_modules/**
+node_modules
+sized-images/*
+incoming-images/*
+processed-images/*
+.htaccess
