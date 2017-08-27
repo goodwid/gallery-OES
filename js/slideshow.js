@@ -1,7 +1,7 @@
 (function(module) {
 
-  var slideshow = {};
-  var slideshowView = {};
+  const slideshow = {};
+  const slideshowView = {};
 
 
   slideshow.current = 0;
@@ -22,7 +22,7 @@
     if (slideshow.current <= -1) {
       slideshow.current = slideshow.images.length - 1;
     }
-    var data = slideshow.images[slideshow.current].title + ', ' +
+    const data = slideshow.images[slideshow.current].title + ', ' +
                slideshow.images[slideshow.current].show + ',  ' +
                slideshow.images[slideshow.current].year;
     slideshow.$data.text(data);
@@ -32,7 +32,6 @@
   };
 
   slideshowView.handleButtons = function() {
-
     $('#left-side, #button-left').on('click', function() {
       slideshowView.changeImage(-1);
     });

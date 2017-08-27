@@ -26,18 +26,18 @@
   };
 
   Art.fetchAll = () => {
-    var url = '/data/artwork.json';
+    const url = '/data/artwork.json';
 
-    var jqXHR = $.ajax({
+    const jqXHR = $.ajax({
       url: url,
       type: 'HEAD',
       dataType: 'json',
       success () {
-        var eTag = jqXHR.getResponseHeader('ETag');
+        const eTag = jqXHR.getResponseHeader('ETag');
         if ((localStorage.eTag === eTag) && (localStorage.rawData)) {
           Art.loadAll(JSON.parse(localStorage.rawData));
           Art.shows = Art.initShows();
-          artworkView.initIndexPage();
+          slideshowView.init(Art.all);
         } else {
           $.getJSON(url)
           .done(function(data) {
@@ -46,7 +46,7 @@
 
             Art.loadAll(data);
             Art.shows = Art.initShows();
-            artworkView.initIndexPage();
+            slideshowView.init(Art.all);
           })
           .fail(function() {
             console.log('getJSON failed, check JSON format or file presence.');

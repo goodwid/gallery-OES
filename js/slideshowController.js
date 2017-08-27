@@ -1,6 +1,6 @@
 /* globals Art slideshow slideshowView  */
 (function(module) {
-  var slideshowController = {};
+  const slideshowController = {};
 
   Art.fetchAll();
 

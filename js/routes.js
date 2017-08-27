@@ -1,5 +1,7 @@
+/* globals page slideshowController aboutController */
+
 (function(module) {
-  var routes = {};
+  const routes = {};
 
   routes.setRouteMappings = function() {
     page.base('/');
@@ -7,7 +9,6 @@
     page('/', slideshowController.index);
     page('slideshow', slideshowController.index);
     page('about', aboutController.index);
-    page('contact', contactController.index);
 
     page();
   };
