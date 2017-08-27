@@ -3,7 +3,7 @@
   const slideshow = {};
   const slideshowView = {};
 
-
+  slideshow.gridsize = 8;
   slideshow.current = 0;
   slideshow.images = [];
   slideshow.$image = $('#slideshow-image');
@@ -22,21 +22,35 @@
     if (slideshow.current <= -1) {
       slideshow.current = slideshow.images.length - 1;
     }
-    const data = slideshow.images[slideshow.current].title + ', ' +
-               slideshow.images[slideshow.current].show + ',  ' +
-               slideshow.images[slideshow.current].year;
-    slideshow.$data.text(data);
-    slideshow.$image.hide();
-    slideshow.$image.css('background-image', 'url(' + slideshow.images[slideshow.current].path + ')');
-    slideshow.$image.show();
+    // const data = slideshow.images[slideshow.current].title + ', ' +
+    //            slideshow.images[slideshow.current].show + ',  ' +
+    //            slideshow.images[slideshow.current].year;
+    // slideshow.$data.text(data);
+    for (let i = 0;i < slideshow.gridsize; i++) {
+      $(`#i${i+1}`).css('background-image', `url(${slideshow.images[slideshow.current+i].path || ''})`);
+    }
   };
 
   slideshowView.handleButtons = function() {
-    $('#left-side, #button-left').on('click', function() {
-      slideshowView.changeImage(-1);
+    $('#button-left').on('click', function() {
+      slideshowView.changeImage(-slideshow.gridsize);
     });
-    $('#right-side, #button-right').on('click', function() {
-      slideshowView.changeImage(1);
+    $(' #button-right').on('click', function() {
+      slideshowView.changeImage(slideshow.gridsize);
+    });
+    $(document).keydown(function(e) {
+      switch(e.which) {
+      case 37: {
+        slideshowView.changeImage(-slideshow.gridsize);
+        break;
+      }
+      case 39:{
+        slideshowView.changeImage(slideshow.gridsize);
+        break;
+      }
+      default: return; // exit this handler for other keys
+      }
+      e.preventDefault(); // prevent the default action (scroll / move caret)
     });
   };
 
