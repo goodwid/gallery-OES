@@ -20,7 +20,8 @@
   background-repeat: no-repeat;
   /*size: 100%;*/
   z-index: 10;
-  height: 145px;
+  min-height: 10em;
+  max-height: 16em;
 
 }
 #controls {
@@ -32,9 +33,9 @@
   color: rgba(0,0,0,1);
 }
 
-/*#left-side, #right-side {
+#left-side, #right-side {
   opacity: 0;
-}*/
+}
 
 #button-left, #button-right {
   opacity: 0.5;

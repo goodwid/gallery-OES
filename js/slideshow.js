@@ -20,25 +20,27 @@
       slideshow.current = 0;
     }
     if (slideshow.current <= -1) {
-      slideshow.current = slideshow.images.length - 1;
+      slideshow.current = slideshow.images.length - slideshow.gridsize;
     }
     // const data = slideshow.images[slideshow.current].title + ', ' +
     //            slideshow.images[slideshow.current].show + ',  ' +
     //            slideshow.images[slideshow.current].year;
     // slideshow.$data.text(data);
     for (let i = 0;i < slideshow.gridsize; i++) {
-      $(`#i${i+1}`).css('background-image', `url(${slideshow.images[slideshow.current+i].path || ''})`);
+      const image = slideshow.current+i < slideshow.images.length ? `url(${slideshow.images[slideshow.current+i].path})` : 'none';
+      $(`#i${i+1}`).css('background-image', image);
     }
   };
 
   slideshowView.handleButtons = function() {
-    $('#button-left').on('click', function() {
+    $('#left-side,#button-left').on('click', function() {
       slideshowView.changeImage(-slideshow.gridsize);
     });
-    $(' #button-right').on('click', function() {
+    $('#right-side,#button-right').on('click', function() {
       slideshowView.changeImage(slideshow.gridsize);
     });
     $(document).keydown(function(e) {
+      e.preventDefault();
       switch(e.which) {
       case 37: {
         slideshowView.changeImage(-slideshow.gridsize);
@@ -48,9 +50,8 @@
         slideshowView.changeImage(slideshow.gridsize);
         break;
       }
-      default: return; // exit this handler for other keys
+      default: return;
       }
-      e.preventDefault(); // prevent the default action (scroll / move caret)
     });
   };
 

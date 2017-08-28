@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Bad+Script);
 
 body {
-  font-family: 'Bad Script', cursive;
+  font-family:  cursive;
   height: 1200px;
   overflow: hidden;
   background-color:  #FFF;
@@ -13,7 +13,7 @@ body {
   background-repeat: no-repeat;
 }
 
-header, footer, nav{
+header, footer, nav {
   background-color: black;
   opacity: 0.8;
   color: white;
@@ -53,14 +53,7 @@ nav {
   min-width: 132px;
 }
 
-
-#social-icons {
-  position: absolute;
-  bottom: 0;
-  left: calc(50% - 48px);
-}
-
-#about, #contact {
+#about{
   width: 97%;
   overflow: scroll;
   padding: 3% inherit;

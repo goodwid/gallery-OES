@@ -57,23 +57,10 @@
     font-weight: 700;
   }
 
-  .nav-item {
-
-  }
-
   footer {
     height: 30px;
   }
 
-  #social-icons {
-    position: absolute;
-    top: 0px;
-    left: 10px;
-  }
-
-  #show-filter {
-    display: none;
-  }
 
   #info {
     /*position: relative;*/
