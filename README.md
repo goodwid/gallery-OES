@@ -1,3 +1,3 @@
-## Rosselle Studios
+## Image Gallery
 
-Webpage source for Andrea Rosselle.
+image gallery for Andrea

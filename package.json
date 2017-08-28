@@ -1,7 +1,7 @@
 {
-  "name": "rossellestudios-site",
+  "name": "OES-gallery",
   "version": "0.1.0",
-  "description": "Website for Andrea Rosselle",
+  "description": "gallery for OES event",
   "main": "index.html",
   "dependencies": {},
   "devDependencies": {
