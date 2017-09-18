@@ -10,6 +10,7 @@
   slideshow.$data = $('#info');
   slideshow.$modal =  $('.modal');
   slideshow.$modalImage = $('#modal-image');
+  slideshow.$modalCaption = $('#caption');
 
   slideshow.populateSlideshow = function(rawData) {
     slideshow.images = rawData;
@@ -47,7 +48,7 @@
       slideshowView.changeImage(slideshow.gridsize);
     });
     $(document).keydown(function(e) {
-      e.preventDefault();
+      // e.preventDefault();
       switch(e.which) {
       case 37: {
         slideshowView.changeImage(-slideshow.gridsize);
@@ -55,6 +56,10 @@
       }
       case 39:{
         slideshowView.changeImage(slideshow.gridsize);
+        break;
+      }
+      case 27:{
+        slideshow.$modal.css('display', 'none');
         break;
       }
       default: return;
@@ -65,7 +70,7 @@
   slideshowView.imageHandler = (e) => {
     slideshow.$modal.css('display', 'block');
     slideshow.$modalImage.attr('src', e.data.path);
-    console.log(e.data);
+    slideshow.$modalCaption.text(e.data.title);
   };
 
   slideshowView.init = function(show) {
