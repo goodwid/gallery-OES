@@ -1,4 +1,4 @@
-/* globals artworkView */
+/* globals artworkView slideshowView */
 
 (function(module) {
 

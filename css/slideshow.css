@@ -20,8 +20,8 @@
   background-repeat: no-repeat;
   /*size: 100%;*/
   z-index: 10;
-  min-height: 10em;
-  max-height: 16em;
+  min-height: 13em;
+  max-height: 20em;
 
 }
 #controls {

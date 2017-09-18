@@ -8,7 +8,8 @@
   slideshow.images = [];
   slideshow.$image = $('#slideshow-image');
   slideshow.$data = $('#info');
-
+  slideshow.$modal =  $('.modal');
+  slideshow.$modalImage = $('#modal-image');
 
   slideshow.populateSlideshow = function(rawData) {
     slideshow.images = rawData;
@@ -27,8 +28,14 @@
     //            slideshow.images[slideshow.current].year;
     // slideshow.$data.text(data);
     for (let i = 0;i < slideshow.gridsize; i++) {
-      const image = slideshow.current+i < slideshow.images.length ? `url(${slideshow.images[slideshow.current+i].path})` : 'none';
-      $(`#i${i+1}`).css('background-image', image);
+      const $i = $(`#i${i+1}`);
+      let image = 'none';
+      if (slideshow.current+i < slideshow.images.length) {
+        image = `url(${slideshow.images[slideshow.current+i].path})`;
+        $i.off('click', slideshowView.imageHandler);
+        $i.on('click', slideshow.images[slideshow.current+i], slideshowView.imageHandler);
+      }
+      $i.css('background-image', image);
     }
   };
 
@@ -53,6 +60,12 @@
       default: return;
       }
     });
+  };
+
+  slideshowView.imageHandler = (e) => {
+    slideshow.$modal.css('display', 'block');
+    slideshow.$modalImage.attr('src', e.data.path);
+    console.log(e.data);
   };
 
   slideshowView.init = function(show) {
