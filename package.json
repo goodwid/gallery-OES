@@ -4,7 +4,8 @@
   "description": "gallery for OES event",
   "main": "index.html",
   "dependencies": {
-    "express": "^4.15.4"
+    "express": "^4.15.4",
+    "express-spa-router": "0.0.8"
   },
   "devDependencies": {
     "concurrent-transform": "^1.0.0",
