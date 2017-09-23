@@ -1,11 +1,5 @@
 @media only screen and (max-width: 600px) {
-  /*aside  {
-    display: none;
-  }*/
 
-
-/*}
-@media screen and (max-width: 750px) and (min-width: 1099px;) {*/
   body {
     overflow: hidden;
   }
@@ -16,7 +10,7 @@
   header h1 {
     font-size: 3em;
     letter-spacing: normal;
-    margin-top: -5px;
+    /*margin-top: -5px;*/
   }
 
   main {
@@ -32,7 +26,6 @@
     width: 100%;
     top: 90px;
     height: 60px;
-
   }
 
   nav ul {
@@ -46,14 +39,14 @@
     height: 18px;
     padding: 0;
     float: left;
-    width: 50%;
-    margin-bottom: 10px;
+    /*width: 50%;*/
+    margin: 5px 0 5px 10px;
   }
 
   .nav-link {
     text-decoration: none;
     color: white;
-    font-size: 1em;
+    font-size: 1.4em;
     font-weight: 700;
   }
 
@@ -61,10 +54,4 @@
     height: 30px;
   }
 
-
-  #info {
-    /*position: relative;*/
-    width: 100%;
-    min-width: 30%;
-  }
 }
