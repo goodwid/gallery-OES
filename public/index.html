@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Image Gallery</title>
+    <link rel="stylesheet" type="text/css" href="/css/gallery.css">
+    <link rel="stylesheet" type="text/css" href="/css/state.css">
+    <link rel="stylesheet" type="text/css" href="/css/slideshow.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+  </head>
+
+  <body>
+    <header class="content-width">
+        <h1 class="center-content">Image Gallery</h1>
+    </header>
+
+    <nav class="center-content">
+      <ul>
+        <li><a class="nav-link" href="/slideshow">Images</a></li>
+        <li><a class="nav-link" href="/about">About</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="slideshow">
+        <section id="slideshow-images">
+          <picture id="i1"></picture>
+          <picture id="i2"></picture>
+          <picture id="i3"></picture>
+          <picture id="i4"></picture>
+          <picture id="i5"></picture>
+          <picture id="i6"></picture>
+          <picture id="i7"></picture>
+          <picture id="i8"></picture>
+        </section>
+        <section id="controls">
+          <div id="left-side"></div>
+          <div id="right-side"></div>
+
+          <i id="button-left" class="fa fa-chevron-circle-left fa-2x"></i>
+          <i id="button-right" class="fa fa-chevron-circle-right fa-2x"></i>
+        </section>
+
+      </section>
+
+      <section id="about">
+
+        <h2>About the Artwork</h2>
+        <p>
+          Yep. There's stuff here.
+        </p>
+
+      </section>
+    </main>
+    <div id="my-modal" class="modal">
+      <!-- The Close Button -->
+      <span class="close" onclick="document.getElementById('my-modal').style.display='none'">&times;</span>
+
+      <!-- Modal Content (The Image) -->
+      <img class="modal-content" id="modal-image">
+
+      <!-- Modal Caption (Image Text) -->
+      <div id="caption"></div>
+    </div>
+    <footer class="center-content content-width">
+      All images &copy; 1999-2017 the respective artist.
+    </footer>
+
+    <script src="/lib/jquery-2.2.3.min.js"></script>
+    <script src="/lib/page.js"></script>
+    <script src="/js/artwork.js"></script>
+    <script src="/js/slideshow.js"></script>
+    <script src="/js/aboutController.js"></script>
+    <script src="/js/slideshowController.js"></script>
+    <script src="/js/routes.js"></script>
+
+  </body>
+</html>
