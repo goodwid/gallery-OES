@@ -70,7 +70,7 @@
   slideshowView.imageHandler = (e) => {
     slideshow.$modal.css('display', 'block');
     slideshow.$modalImage.attr('src', e.data.path);
-    slideshow.$modalCaption.text(e.data.title);
+    slideshow.$modalCaption.text(e.data.name);
   };
 
   slideshowView.init = function(show) {

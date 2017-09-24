@@ -3,13 +3,9 @@
 (function(module) {
 
   function Art (opts) {
-    const pathPrefix = 'https://s3-us-west-2.amazonaws.com/rossellestudios/';
-    // const pathPrefix = '/sized-images/';
-
-    this.title = opts.title;
-    this.media = opts.media;
-    this.show = opts.show;
-    this.year = opts.year;
+    // const pathPrefix = 'https://s3-us-west-2.amazonaws.com/rossellestudios/';
+    const pathPrefix = '/images/';
+    this.name = opts.name;
     this.path = pathPrefix + opts.filename;
   }
 
@@ -26,7 +22,7 @@
   };
 
   Art.fetchAll = () => {
-    const url = '/data/artwork.json';
+    const url = '/data/images.json';
 
     const jqXHR = $.ajax({
       url: url,
