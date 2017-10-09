@@ -12,6 +12,11 @@
     letter-spacing: normal;
     /*margin-top: -5px;*/
   }
+  header h2 {
+    margin-top: -40px;;
+    font-size: 1.5em;
+    letter-spacing: normal;
+  }
 
   main {
     left: 0px;
@@ -19,6 +24,24 @@
     position: absolute;
     top: 150px;
     bottom: 30px;
+  }
+
+  #about h3 {
+    margin-right: 0;
+  }
+
+  #about .quote {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  #about img {
+    margin: auto;
+    width: 34%;
+  }
+
+  .attrib {
+    margin-right: 0;
   }
 
   nav {
@@ -31,7 +54,7 @@
   nav ul {
     position: absolute;
     top:0;
-    left: 100px;
+    left: 34%;
     margin: 0;
   }
 
