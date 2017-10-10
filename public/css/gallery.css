@@ -170,9 +170,8 @@ nav ul li {
 .modal-content {
     margin: auto;
     display: block;
-    width: 80%;
-    max-width: 400px;
-    /*max-height: 300px;*/
+    /*width: 80%;*/
+    max-width: 50%;
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
